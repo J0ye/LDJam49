@@ -1,20 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
 
-[RequireComponent(typeof(Light2D))]
+
+[RequireComponent(typeof(UnityEngine.Rendering.Universal.Light2D))]
 public class Torchlight2D : MonoBehaviour
 {
     public Vector2 timeBetweenFlicker = Vector2.one;
     public Vector2 intensityLevel = Vector2.one;
 
-    private new Light2D light;
+    private new UnityEngine.Rendering.Universal.Light2D light;
     private bool isFlickering = false;
     // Start is called before the first frame update
     void Start()
     {
-        light = GetComponent<Light2D>();
+        light = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
     }
 
     // Update is called once per frame
